@@ -16,7 +16,7 @@ export class UsersController {
     }
 
     @Get(':username')
-    findOneUser(@Param() username: string ): Promise<UserDto> {
+    findOneUser(@Param('username') username: string ): Promise<UserDto> {
         return this.userService.findOneUser(username);
     }
 
